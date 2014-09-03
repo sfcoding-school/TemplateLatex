@@ -1,0 +1,17 @@
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{perugiabeamer}[1999/02/16 v1.0]
+
+\usetheme{PerugiaB}
+\let\oldframetitle\frametitle
+\renewcommand{\frametitle}[1]{
+	\AtBeginSection[]
+	{
+   		\begin{frame}
+      			\frametitle{Outline}
+       			\tableofcontents[currentsection]
+   		\end{frame}
+	}
+	\oldframetitle{#1}
+
+}
+

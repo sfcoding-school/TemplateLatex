@@ -2,23 +2,21 @@
 \ProvidesPackage{perugiabeamer}[1999/02/16 v1.0]
 
 \usetheme{PerugiaB}
-\let\oldframetitle\frametitle
-\renewcommand{\frametitle}[1]{
-	\AtBeginSection[]
-	{
+
+
+\newcommand{\frametitlesec}[1]{
+		\frametitle{\begin{small}$\hookrightarrow$\insertsection \\\end{small}\vspace{-2mm} #1}
+}
+
+\newcommand{\addoutline}{
+	\AtBeginSection[]{
    		\begin{frame}
       			\frametitle{Outline}
        			\tableofcontents[currentsection]
    		\end{frame}
-	}
-	\oldframetitle{#1}
+   	}
 }
 
-\newcommand{\addsectionname}{
-	\let\frametitle\oldframetitle
-	\renewcommand{\frametitle}[1]{
-		\oldframetitle{\begin{small}$\hookrightarrow$\insertsection \\\end{small}\vspace{-2mm} ##1}
-	}
-}
+
 
 

@@ -12,6 +12,13 @@
    		\end{frame}
 	}
 	\oldframetitle{#1}
-
 }
+
+\newcommand{\addsectionname}{
+	\let\frametitle\oldframetitle
+	\renewcommand{\frametitle}[1]{
+		\oldframetitle{\begin{small}$\hookrightarrow$\insertsection \\\end{small}\vspace{-2mm} ##1}
+	}
+}
+
 

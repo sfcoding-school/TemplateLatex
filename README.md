@@ -4,6 +4,7 @@ perugiabeamer
 Inizio documento Latex
 
 ```
+\pdfminorversion 4
 \documentclass{beamer}
 \usepackage{perugiabeamer}
 

@@ -1,7 +1,0 @@
-fedora -> /usr/share/texlive/texmf-dist/tex/latex
-Mac OS -> /usr/local/texlive/2014/texmf-dist/tex/latex
-ubuntu -> /usr/share/texmf/tex/latex
-
-Comandi da utilizzare dopo aver spostato la cartella:
-mktexlsr
-sudo texhash

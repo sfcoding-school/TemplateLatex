@@ -1,10 +1,26 @@
 perugiabeamer
 =============
 
+## Installazione
+Clonare la cartella della repository in questo path:
+
+*Fedora -> /usr/share/texlive/texmf-dist/tex/latex*
+
+*Mac OS -> /usr/local/texlive/2014/texmf-dist/tex/latex*
+
+*Ubuntu -> /usr/share/texmf/tex/latex*
+
+Comandi da utilizzare dopo aver creato la cartella:
+
+*sudo mktexlsr*
+
+*sudo texhash*
+
+## Come usarla
+
 Inizio documento Latex
 
 ```
-\pdfminorversion 4
 \documentclass{beamer}
 \usepackage{perugiabeamer}
 

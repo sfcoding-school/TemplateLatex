@@ -25,11 +25,14 @@ Inizio documento Latex
 \usepackage{perugiabeamer}
 
 \title{titolo tesi}
-\author{Candidato:  \\
-		    Relatore:  \bigskip}
+\author{
+	Candidato:  \\
+	Relatore:  
+\bigskip}
 \date{}
 
 \begin{document}
+	\addoutline
 	\maketitle
 
 \end{document}

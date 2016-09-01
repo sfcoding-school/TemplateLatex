@@ -30,7 +30,6 @@ Inizio documento Latex
 \date{}
 
 \begin{document}
-	\frametitle{}
 	\maketitle
 
 \end{document}
@@ -45,5 +44,3 @@ Ogni slide viene scritta come segue:
 
 \end{frame}
 ```
-
-Per aggiungere il nome della sezione sopra al titolo delle slide scrivere `\addsectionname` appena sotto a `\begin{document}`

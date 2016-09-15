@@ -1,0 +1,133 @@
+\documentclass[
+    a4paper,
+    11pt,
+    oneside,
+    hidelinks
+]{book} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{dedication}					%
+{											%
+   \cleardoublepage							%
+   \thispagestyle{empty}						%
+   \vspace*{\stretch{1}}						%
+   \hfill\begin{minipage}[t]{0.88\textwidth}	%
+   \raggedleft								%
+}											%
+{											%
+   \end{minipage}							%
+   \vspace*{\stretch{3}}						%
+   \clearpage								%
+}											%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{setspace} % Lets you change line spacing
+\onehalfspacing
+\frenchspacing % that makes the sentence spacing single spaced
+
+\usepackage{graphicx} % This package accepts as an argument the external driver to be used to manage picture
+
+\usepackage{lipsum} % lorem ipsum text
+
+% math basic environment %%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm}								%
+												%
+\def\ZZ{\mathbb{Z}} % set of all integers		%
+\def\RR{\mathbb{R}} % set of all real numbers	%
+												%
+% The first argument is the name you will use to %
+%	reference it, the second argument is the     %
+%	output LaTeX will print whenever you use it  %
+\newtheorem{theorem}{Theorem}[section]			%
+\newtheorem{lemma}[theorem]{Lemma}				%
+\newtheorem{definition}[theorem]{Definition}		%
+\newtheorem{proposition}[theorem]{Proposition}	%
+\newtheorem{corollary}[theorem]{Corollary}		%
+\newtheorem{claim}[theorem]{Claim}				%
+\newtheorem{fact}[theorem]{Fact}					%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\includegraphics[scale=0.16]{imgsx.jpg}
+\vspace{50pt}
+
+UNIVERSITÀ DEGLI STUDI DI PERUGIA
+
+Dipartimento di Matematica e Informatica
+\vspace{30pt}
+
+CORSO DI LAUREA [triennale/magistrale] IN INFORMATICA
+\vspace{30pt}
+
+TESI DI LAUREA
+\bigskip
+
+\setstretch{1.5}{\huge\textbf{TITOLO TESI}}
+\vspace{110pt}
+
+\begin{tabular}{p{230pt}l}
+\textit{Laureando} & \textit{Relatore} \\
+\textbf{NOMELAUREANDO} & \textbf{NOMERELATORE}
+\end{tabular}
+\vspace{48pt}
+
+Anno Accademico AA
+\end{center}
+\end{titlepage}
+
+\cleardoublepage
+\newpage	
+\begin{dedication}
+Dedica
+\end{dedication}
+
+\frontmatter % turns off chapter numbering and uses roman numerals for page numbers;
+
+\tableofcontents % Generate a table of contents
+
+\chapter*{Introduzione} 
+% \addcontentsline{toc}{chapter}{Introduction} % command adds an entry to the specified list (i.e. toc)
+
+\lipsum[2]
+
+\mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers;
+
+\chapter{Primo Capitolo}
+\section{Sezione 1}
+\lipsum[2]
+\subsection{Sottosezione}
+\lipsum[2]
+\begin{definition}
+Here is a new definition.
+\end{definition}
+\begin{theorem}
+Here is the new Theorem
+\end{theorem}
+\begin{proof}
+Here is my proof
+\begin{equation}
+%\nonumber % turn off equation auto numbering
+a^2 + b^2 = c^2
+\end{equation}
+
+\end{proof}
+
+\section{Sezione 1}
+\lipsum[2]
+
+\chapter{Secondo Capitolo}
+\lipsum[2]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Bibliography
+\bibliographystyle{plain}
+%\bibliography{path to the .bib file}
+
+\end{document}

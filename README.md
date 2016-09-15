@@ -1,4 +1,4 @@
-perugiabeamer
+TemplateBeamer
 =============
 
 ## Installazione
